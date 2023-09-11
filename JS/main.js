@@ -1,47 +1,66 @@
-const renderToastBtn = document.getElementById("renderToastBtn");
-const btn = document.getElementById("showMeBtn");
-const toastsContainer = document.getElementById("toastsContainer");
-const inputText = document.getElementById("inputText");
-let response = 'Default Toast';
+const DEFAULTS = {
+  message: 'Default Toast',
+  duration: 3000,
+  type: 'info' // 'success', 'error', 'info'
+};
 
-
-//Funcion temporal para crear los diferentes tipos de toast
-const temporaryFunction = () => {
-    alert("Under Construction");
+function getTypeStyles(type) {
+  switch (type) {
+      case 'success':
+          return 'px-10 py-3 bg-green-100 bg-opacity-90 text-gray rounded shadow-md opacity-1';
+      case 'error':
+          return 'px-10 py-3 bg-red-500 bg-opacity-90 text-white rounded shadow-md opacity-1';
+      case 'info':
+      default:
+          return 'px-10 py-3 bg-white-500 bg-opacity-90 text-black rounded shadow-md opacity-1';
+  }
 }
 
-renderToastBtn.addEventListener("click", () => {
+function showToast(options = {}) {
+  const config = { ...DEFAULTS, ...options };
+
   const toast = document.createElement("div");
   toast.innerHTML = `
-  <div class="flex items-center gap-2.5">
-      <img src="assets/icon.png" class="w-6 h-6">
-      ${inputText.value || response}
-  </div>`;
-  toast.className =
-    "px-10 py-3 bg-green-50 bg-opacity-90 text-black rounded shadow-md opacity-1";
+      <div class="flex items-center gap-2.5">
+          <img src="assets/icon.png" class="w-6 h-6">
+          ${config.message}
+      </div>
+  `;
+
+  toast.className = `
+      px-10 py-3 rounded-lg shadow-md opacity-1
+      ${getTypeStyles(config.type)}
+  `;
 
   toastsContainer.appendChild(toast);
 
   let timeout;
 
-  // Función para ocultar el toast
   function hideToast() {
-    toast.style.opacity = "0";
-    setTimeout(() => {
-      toast.remove();
-    }, 2000);
+      toast.style.opacity = "0";
+      setTimeout(() => {
+          toast.remove();
+      }, 2000);
   }
 
-  // Iniciar el timeout por defecto cuando el toast se crea
-  timeout = setTimeout(hideToast, 3000);
+  timeout = setTimeout(hideToast, config.duration);
 
   toast.addEventListener("mouseover", () => {
-    clearTimeout(timeout); // Cancelar el timeout cuando el cursor está encima del Toast
+      clearTimeout(timeout); 
   });
 
   toast.addEventListener("mouseleave", () => {
-    // Reiniciar el timeout cuando el cursor se mueve fuera del Toast
-    timeout = setTimeout(hideToast, 3000);
+      timeout = setTimeout(hideToast, config.duration);
+  });
+}
+
+
+const renderToastBtn = document.getElementById("renderToastBtn");
+const inputText = document.getElementById("inputText");
+
+renderToastBtn.addEventListener("click", () => {
+  showToast({
+      message: inputText.value || DEFAULTS.message,
+      type: 'success' // Aquí puedes cambiar el tipo según lo que desees
   });
 });
-
