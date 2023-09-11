@@ -16,13 +16,25 @@ function getTypeStyles(type) {
   }
 }
 
+function imagesConfig(type) {
+  switch (type) {
+      case 'success':
+          return 'assets/icon-success.png';
+      case 'error':
+          return 'assets/icon-error.png';
+      case 'info':
+      default:
+          return 'assets/icon-info.png';
+  }
+}
+
 function fasToast(options = {}) {
   const config = { ...DEFAULTS, ...options };
 
   const toast = document.createElement("div");
   toast.innerHTML = `
       <div class="flex items-center gap-2.5">
-          <img src="assets/icon.png" class="w-6 h-6">
+          <img src="${imagesConfig(config.type)}" class="w-6 h-6">
           ${config.message}
       </div>
   `;
