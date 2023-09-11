@@ -8,7 +8,7 @@
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/styles/style.css" />
   </head>
   <body class="bg-gray-100 p-10">
     <button
@@ -18,44 +18,14 @@
       Render a toast
     </button>
 
+    <button
+      onclick="temporaryFunction()"
+      class="flex gap-2 flex-col-reverse flex-wrap p-2 m-1 bg-red-600 text-white rounded hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-opacity-50"
+    >
+      Error
+    </button>
+
     <div id="toastsContainer" class="fixed top-4 right-4 z-50"></div>
-
-    <script>
-      const renderToastBtn = document.getElementById("renderToastBtn");
-      const toastsContainer = document.getElementById("toastsContainer");
-      let clickCount = 1;
-
-      renderToastBtn.addEventListener("click", () => {
-        const toast = document.createElement("div");
-        toast.innerHTML = `Event has been created`;
-        toast.className =
-          "px-10 py-3 bg-green-50 bg-opacity-90 text-black rounded shadow-md opacity-1";
-
-        toastsContainer.appendChild(toast);
-
-        let timeout; // Este será el timeout para ocultar el toast
-
-        toast.addEventListener("mouseenter", () => {
-          clearTimeout(timeout); // Cancela el timeout si el cursor está encima del toast
-        });
-
-        toast.addEventListener("mouseleave", () => {
-          // Comienza el timeout cuando el cursor se mueve fuera del Toast
-          timeout = setTimeout(() => {
-            toast.style.opacity = "0";
-            setTimeout(() => {
-              toast.remove();
-            }, 2000);
-          }, 3000);
-        });
-
-        timeout = setTimeout(() => {
-          toast.style.opacity = "0";
-          setTimeout(() => {
-            toast.remove();
-          }, 2000);
-        }, 3000);
-      });
-    </script>
+    <script src="/JS/main.js"></script>
   </body>
 </html>
