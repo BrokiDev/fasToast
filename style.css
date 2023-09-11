@@ -2,7 +2,7 @@
   display: none; /* Esconde todas las notificaciones excepto la última */
 }
 #toastsContainer:hover > div {
-  display: block; /* Muestra todas las notificaciones al pasar el cursor */
+  display: block; /* Muestra todas las notificaciones al pasar el Cursor */
   margin-top: 0.7rem; /* Espaciado reducido entre notificaciones cuando se muestran */
 }
 #toastsContainer > div {
