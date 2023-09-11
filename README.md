@@ -20,19 +20,16 @@
 
  Uso
 
-### Mostrar una notificación
 
-fasToast.show('¡Tu notificación aquí!');
+### Personalizar la notificacion 
 
-### Perso nalizar la 
-
-fasToast(
+ `fasToast(
 {
 message: '¡Tu notificación aquí!',
 duration: 5000, // Duración en milisegundos
 type: 'success' // 'success', 'error', 'info'
 }
-)
+) `
 
 ## Opciones
 
