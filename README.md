@@ -18,9 +18,9 @@
 `<link rel="stylesheet" href="ruta-hacia-fasToast.css" />`  
  `<script src="ruta-hacia-fasToast.js"></script>`
 
-Uso
+### Uso
 
-### Personalizar la notificacion
+Personalizar la notificacion
 
 ```
 fasToast({
