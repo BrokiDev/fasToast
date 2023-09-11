@@ -59,7 +59,7 @@ const renderToastBtn = document.getElementById("renderToastBtn");
 const inputText = document.getElementById("inputText");
 
 renderToastBtn.addEventListener("click", () => {
-  showToast({
+  fasToast({
       message: inputText.value || DEFAULTS.message,
       type: 'success' // Aquí puedes cambiar el tipo según lo que desees
   });
