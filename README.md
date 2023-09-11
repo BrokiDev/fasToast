@@ -15,21 +15,20 @@
 
 2. Importa el archivo CSS y JS en tu proyecto:
 
-  `<link rel="stylesheet" href="ruta-hacia-fasToast.css" />`  
-  `<script src="ruta-hacia-fasToast.js"></script>` 
+`<link rel="stylesheet" href="ruta-hacia-fasToast.css" />`  
+ `<script src="ruta-hacia-fasToast.js"></script>`
 
- Uso
+Uso
 
+### Personalizar la notificacion
 
-### Personalizar la notificacion 
-
- `fasToast(
-{
-message: '¡Tu notificación aquí!',
-duration: 5000, // Duración en milisegundos
-type: 'success' // 'success', 'error', 'info'
-}
-) `
+```
+fasToast({
+   message: '¡Tu notificación aquí!',
+   duration: 5000, // Duración en milisegundos
+   type: 'success' // 'success', 'error', 'info'
+})
+```
 
 ## Opciones
 
