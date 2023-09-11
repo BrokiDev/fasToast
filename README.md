@@ -13,7 +13,6 @@
 1. Clona este repositorio:
    git clone https://github.com/BrokiDev/fasToast.git
 
-
 2. Importa el archivo CSS y JS en tu proyecto:
 
    <link rel="stylesheet" href="ruta-hacia-fasToast.css" />
@@ -23,19 +22,17 @@
 
 ### Mostrar una notificación
 
-
 fasToast.show('¡Tu notificación aquí!');
-
 
 ### Personalizar la notificación
 
-
-fasToast.show({
-  message: '¡Tu notificación aquí!',
-  duration: 5000, // Duración en milisegundos
-  type: 'success' // 'success', 'error', 'info'
-});
-
+fasToast(
+{
+message: '¡Tu notificación aquí!',
+duration: 5000, // Duración en milisegundos
+type: 'success' // 'success', 'error', 'info'
+}
+)
 
 ## Opciones
 

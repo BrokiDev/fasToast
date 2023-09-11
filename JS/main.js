@@ -16,7 +16,7 @@ function getTypeStyles(type) {
   }
 }
 
-function showToast(options = {}) {
+function fasToast(options = {}) {
   const config = { ...DEFAULTS, ...options };
 
   const toast = document.createElement("div");
@@ -64,3 +64,4 @@ renderToastBtn.addEventListener("click", () => {
       type: 'success' // Aquí puedes cambiar el tipo según lo que desees
   });
 });
+
