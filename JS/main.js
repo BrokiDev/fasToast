@@ -57,6 +57,8 @@ function fasToast(options = {}) {
 
 const renderToastBtn = document.getElementById("renderToastBtn");
 const inputText = document.getElementById("inputText");
+const errorToastBtn = document.getElementById("renderToastBtn2");
+const infoToastBtn = document.getElementById("renderToastBtn3");
 
 renderToastBtn.addEventListener("click", () => {
   fasToast({
@@ -64,4 +66,20 @@ renderToastBtn.addEventListener("click", () => {
       type: 'success' // Aquí puedes cambiar el tipo según lo que desees
   });
 });
+
+errorToastBtn.addEventListener("click", () => {
+  fasToast({
+      message: inputText.value || DEFAULTS.message,
+      type: 'error' // Aquí puedes cambiar el tipo según lo que desees
+  });
+});
+
+infoToastBtn.addEventListener("click", () => {
+  fasToast({
+      message: inputText.value || DEFAULTS.message,
+      type: 'info' // Aquí puedes cambiar el tipo según lo que desees
+  });
+});
+
+
 

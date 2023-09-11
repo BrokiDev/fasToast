@@ -24,14 +24,21 @@
       id="renderToastBtn"
       class="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50"
     >
-      Success toast
+      Success Toast
     </button>
 
     <button
-      onclick="temporaryFunction()"
-      class="flex gap-2 flex-col-reverse flex-wrap p-2 m-1 bg-red-600 text-white rounded hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-opacity-50"
+      id="renderToastBtn2"
+      class="flex gap-2 my-2 px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50"
     >
-      Error
+      Error Toast
+    </button>
+
+    <button
+      id="renderToastBtn3"
+      class="flex gap-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50"
+    >
+      Info Toast
     </button>
 
     <div id="toastsContainer" class="fixed top-4 right-4 z-50"></div>
