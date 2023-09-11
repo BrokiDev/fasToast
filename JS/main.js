@@ -1,7 +1,8 @@
 const renderToastBtn = document.getElementById("renderToastBtn");
 const btn = document.getElementById("showMeBtn");
 const toastsContainer = document.getElementById("toastsContainer");
-let response = "Success Login :)";
+const inputText = document.getElementById("inputText");
+let response = 'Default Toast';
 
 
 //Funcion temporal para crear los diferentes tipos de toast
@@ -14,7 +15,7 @@ renderToastBtn.addEventListener("click", () => {
   toast.innerHTML = `
   <div class="flex items-center gap-2.5">
       <img src="assets/icon.png" class="w-6 h-6">
-      ${response}
+      ${inputText.value || response}
   </div>`;
   toast.className =
     "px-10 py-3 bg-green-50 bg-opacity-90 text-black rounded shadow-md opacity-1";
