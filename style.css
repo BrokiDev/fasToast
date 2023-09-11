@@ -1,0 +1,20 @@
+#toastsContainer > div:not(:last-child) {
+  display: none; /* Esconde todas las notificaciones excepto la última */
+}
+#toastsContainer:hover > div {
+  display: block; /* Muestra todas las notificaciones al pasar el cursor */
+  margin-top: 0.7rem; /* Espaciado reducido entre notificaciones cuando se muestran */
+}
+#toastsContainer > div {
+  animation: slideDown 0.3s forwards;
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
