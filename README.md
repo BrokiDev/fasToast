@@ -15,16 +15,16 @@
 
 2. Importa el archivo CSS y JS en tu proyecto:
 
- ****** <link rel="stylesheet" href="ruta-hacia-fasToast.css" /> ****** 
- ****** <script src="ruta-hacia-fasToast.js"></script> ******
+  `<link rel="stylesheet" href="ruta-hacia-fasToast.css" />`  
+  `<script src="ruta-hacia-fasToast.js"></script>` 
 
-## Uso
+ Uso
 
 ### Mostrar una notificación
 
 fasToast.show('¡Tu notificación aquí!');
 
-### Personalizar la notificación
+### Perso nalizar la 
 
 fasToast(
 {
