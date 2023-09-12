@@ -7,24 +7,24 @@ const DEFAULTS = {
 function getTypeStyles(type) {
   switch (type) {
       case 'success':
-          return 'px-10 py-3 bg-green-100 bg-opacity-90 text-gray rounded shadow-md opacity-1';
+          return 'px-15 py-3  bg-opacity-90 colorsuccess rounded shadow-md opacity-1';
       case 'error':
-          return 'px-10 py-3 bg-red-500 bg-opacity-90 text-white rounded shadow-md opacity-1';
+          return 'px-10 py-3  bg-opacity-90 colorerror rounded shadow-md opacity-1';
       case 'info':
       default:
-          return 'px-10 py-3 bg-white-500 bg-opacity-90 text-black rounded shadow-md opacity-1';
+          return 'px-10 py-3  bg-opacity-90 colorinfo rounded shadow-md opacity-1';
   }
 }
 
 function imagesConfig(type) {
   switch (type) {
       case 'success':
-          return 'assets/icon-success.png';
+          return 'assets/icon-success.svg';
       case 'error':
-          return 'assets/icon-error.png';
+          return 'assets/icon-error.svg';
       case 'info':
       default:
-          return 'assets/icon-info.png';
+          return 'assets/icon-info.svg';
   }
 }
 

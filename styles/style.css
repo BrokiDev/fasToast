@@ -1,3 +1,45 @@
+@import url("https://fonts.bunny.net/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --normal-bg: #fff;
+  --normal-border: #bbbcbc;
+  --normal-text: black;
+  --success-bg: hsl(143, 85%, 96%);
+  --success-border: hsl(145, 92%, 91%);
+  --success-text: hsl(140, 100%, 27%);
+  --error-bg: hsl(359, 100%, 94%);
+  --error-border: (359, 100%, 94%);
+  --error-text: hsl(360, 100%, 45%);
+}
+
+body {
+  font-family: "Inter";
+}
+
+.colorsuccess {
+  background-color: var(--success-bg);
+  border: var(--success-border);
+  color: var(--success-text);
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.colorerror {
+  background-color: var(--error-bg);
+  border: var(--error-border);
+  color: var(--error-text);
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.colorinfo {
+  background-color: var(--normal-bg);
+  border: var(--normal-border);
+  color: var(--normal-text);
+  font-weight: 600;
+  font-size: 13px;
+}
+
 #toastsContainer > div:not(:last-child) {
   display: none; /* Esconde todas las notificaciones excepto la última */
 }
